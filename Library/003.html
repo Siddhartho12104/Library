@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>003</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<h1><center>Book Details</center></h1>
+<br><br>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<b>Name: </b>{{name}}<br>
+<b>Author: </b>{{author}}<br>
+<b>About: </b>{{about}}<br>
+<b>Availability: </b>{{avail}}<br>
+
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+    $scope.name = "Great principles of computing";
+    $scope.author = "Denning, Peter J";
+    $scope.about = "Computing is usually viewed as a technology field that advances at the breakneck speed of Moore’s Law. If we turn away even for a moment, we might miss a game-changing technological breakthrough or an earthshaking theoretical development. This book takes a different perspective, presenting computing as a science governed by fundamental principles that span all technologies. Computer science is a science of information processes. We need a new language to describe the science, and in this book Peter Denning and Craig Martell offer the great principles framework as just such a language. This is a book about the whole of computing—its algorithms, architectures, and designs. Denning and Martell divide the great principles of computing into six categories: communication, computation, coordination, recollection, evaluation, and design. They begin with an introduction to computing, its history, its many interactions with other fields, its domains of practice, and the structure of the great principles framework. They go on to examine the great principles in different areas: information, machines, programming, computation, memory, parallelism, queueing, and design. Finally, they apply the great principles to networking, the Internet in particular. ";
+    $scope.avail = "Yes";
+});
+</script>
+
+<br><br>
+
+</body>
+</html>
