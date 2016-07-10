@@ -13,6 +13,8 @@
 <b>Author: </b>{{author}}<br>
 <b>About: </b>{{about}}<br>
 <b>Availability: </b>{{avail}}<br>
+<button ng-click="func1()" id="btn1" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Issue</button>
+
 
 
 </div>
@@ -25,6 +27,16 @@ app.controller('myCtrl', function($scope) {
     $scope.author = "Biermann, Alan W";
     $scope.about = "In Great Ideas in Computer Science: A Gentle Introduction, Alan Biermann presents the great ideas of computer science that together comprise the heart of the field. He condenses a great deal of complex material into a manageable, accessible form. His treatment of programming, for example, presents only a few features of Pascal and restricts all programs to those constructions. Yet most of the important lessons in programming can be taught within these limitations. The student's knowledge of programming then provides the basis for understanding ideas in compilation, operating systems, complexity theory, noncomputability, and other topics. Whenever possible, the author uses common words instead of the specialized vocabulary that might confuse readers.Readers of the book will learn to write a variety of programs in Pascal, design switching circuits, study a variety of Von Neumann and parallel architectures, hand simulate a computer, examine the mechanisms of an operating system, classify various computations as tractable or intractable, learn about noncomputability, and explore many of the important issues in artificial intelligence.This second edition has new chapters on simulation, operating systems, and networks. In addition, the author has upgraded many of the original chapters based on student and instructor comments, with a view toward greater simplicity and readability.";
     $scope.avail = "Yes";
+    $scope.func1 = function(){
+    	if($scope.avail=="Yes"){
+			alert("Book issued");
+			$scope.avail="No";
+		}
+		else
+		{
+			alert("Book is currently taken");
+		}
+    }
 });
 </script>
 

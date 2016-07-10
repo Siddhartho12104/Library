@@ -13,6 +13,8 @@
 <b>Author: </b>{{author}}<br>
 <b>About: </b>{{about}}<br>
 <b>Availability: </b>{{avail}}<br>
+<button ng-click="func1()" id="btn1" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Issue</button>
+
 
 
 </div>
@@ -25,6 +27,16 @@ app.controller('myCtrl', function($scope) {
     $scope.author = "Johnson,Steven";
     $scope.about = "Emergence: The Connected Lives of Ants, Brains, Cities, and Software is a book written by media theorist Steven Berlin Johnson, published in 2001. Early review drafts had the subtitle 'What the New Science Can Teach Us About Our Minds, Our Communities, and Ourselves' instead of the connected life.";
     $scope.avail = "Yes";
+    $scope.func1 = function(){
+    	if($scope.avail=="Yes"){
+			alert("Book issued");
+			$scope.avail="No";
+		}
+		else
+		{
+			alert("Book is currently taken");
+		}
+    }
 });
 </script>
 
